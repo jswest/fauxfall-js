@@ -12,7 +12,7 @@ $(document).ready( function() {
       about_page.fetch({
         success: function() {
           var about_page_view = new window.AboutPageView( { model: about_page } );
-          about_page_view.render();
+          var about_page_timer = setTimeout( about_page_view.render, 2000 );
         }
       });
     }
