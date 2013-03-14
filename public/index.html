@@ -7,10 +7,30 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js" type="text/javascript"></script>
-    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/lib.js" type="text/javascript"></script>
+		<script src="js/page.js" type="text/javascript"></script>
     <script src="js/router.js" type="text/javascript"></script>
 	</head>
 	<body>
-<h1 class="smile">:)</h1>
+<script id="about-page-template" type="text/template">
+	<header class="page-header">
+		<h1><%= title %></h1>
+	</header>
+	<div class="body"><%= body %></div>
+	<div class="bios">
+		<% for( var i = 0; i < bios.length; i++ ) { %>
+			<article class="bio">
+				<header class="about-page-bio-header">
+					<h1><%= bios[i].name %></h1>
+				</header>
+				<img src="<%= bios[i].src %>">
+				<%= bios[i].bio %>
+			</article>
+		<% } %>
+	</div>
+</script>
+<header id="primary-nav-wrapper"></header>
+<div id="content"><h1 class="smile">:)</h1></div>
+<footer id="secondary-nav-wrapper"></footer>
 	</body>
 </html>

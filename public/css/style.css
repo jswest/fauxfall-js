@@ -2,6 +2,18 @@
   margin: 0;
   padding: 0; }
 
+h1 {
+  font-family: "Militia Sans Fat Italic";
+  font-style: italic;
+  font-weight: 800;
+  line-height: 100%;
+  text-transform: uppercase; }
+
+p {
+  font-family: "Garamond";
+  font-size: 17px;
+  line-height: 30px; }
+
 h1.smile {
   font-family: "Times New Roman", "Times", serif;
   font-size: 50px;
@@ -19,3 +31,57 @@ h1.smile {
   -ms-transition: transform 5s linear;
   -o-transition: transform 5s linear;
   transition: transform 5s linear; }
+
+#content {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 900px; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.page {
+  margin: 0 auto;
+  width: 600px; }
+  .page header.page-header {
+    border-bottom: 1px solid black;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    height: 300px; }
+    .page header.page-header h1 {
+      font-family: "League Gothic";
+      font-size: 340px;
+      font-style: normal;
+      font-weight: 400;
+      text-align: center; }
+  .page .body p:first-child:first-letter {
+    display: block;
+    float: left;
+    font-family: "League Gothic";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 200px;
+    height: 200px; }
+  .page article {
+    border-top: 1px solid black;
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+    position: relative; }
+    .page article header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2; }
+      .page article header h1 {
+        font-family: "League Gothic";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400; }
+    .page article img {
+      float: left;
+      margin: 0 20px 20px 0;
+      width: 380px;
+      height: auto; }
