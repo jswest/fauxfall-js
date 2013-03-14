@@ -10,7 +10,10 @@ window.AboutPageView = Backbone.View.extend({
     var primary_template = _.template( $('#about-page-template').html(), this.model.toJSON() );
     $('#content').html( $(this.el).html( primary_template ) );
     $('#content').find('img').each( function() {
-      var f = new window.Fader( $(this) );
+      $(this).on( 'load', function() {
+        var f = new window.Fader( $(this) );
+        f.init();
+      })
     });
   }
 });

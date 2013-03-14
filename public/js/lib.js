@@ -25,7 +25,6 @@ window.Fader = function( img ) {
   this.img = img;
   
   this.manipulate = function() {
-    console.log( _this.img );
     _this.img.wrap( "<div class='fader-wrapper' />" );
     _this.img.before( "<div class='gloss' />" );
     _this.img.parent().css({
@@ -67,15 +66,17 @@ window.Fader = function( img ) {
     if( image_center > window_center + window_quarter ) { var opacity = (0.7 * to_percent()) / 0.4; }
     else { var opacity = 0; }
     _this.img.parent().find('.gloss').css( 'opacity', opacity );
-    console.log( 'opacity: ' + opacity );
   }
   this.bind = function() {
+    _this.set_opacity();
     $(window).on( 'scroll', _this.set_opacity );
+    $(window).on( 'resize', _this.set_opacity );
   }
-  
-  this.manipulate();
-  this.gloss();
-  this.bind();
+  this.init = function() {
+    this.manipulate();
+    this.gloss();
+    this.bind();    
+  }
 }
 
 
