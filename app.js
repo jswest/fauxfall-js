@@ -7,7 +7,7 @@ var data    =   require( './data/data');
 var app     =   express();
 
 app.configure( function() {
-  app.set( 'port', process.env.PORT || 3000 );
+  app.set( 'port', process.env.PORT || 5000 );
   app.use( express.favicon() );
   app.use( express.cookieParser( 'super-secret' ) );
   app.use( express.session() );

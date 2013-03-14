@@ -14,7 +14,7 @@ Well, here's a sampling of what we're thinking:
 - Parallaxed/cutout background images
 
 ### How is it?
-JavaScript through and through. Node.js on the back and Backbone.js on the front. CSS3 transitions and transforms, so modern browsers only—not even graceful degradation for IE <= 8. So there. 
+JavaScript through and through. Node.js on the back and Backbone.js on the front. CSS3 transitions and transforms, so modern browsers only—not even graceful degradation for IE <= 8. So there. Also, it runs on p 5000.
 
 ### Who is it?
 Fauxfall is the brainchild of @jswest and Karim, who doesn't, I don't think have a Github, with ample support from @gabeisman. @jswest and @gabeisman will be coding the crap out of it.
