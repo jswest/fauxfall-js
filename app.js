@@ -2,7 +2,8 @@
 -----------------------------------*/
 var express =   require( 'express' );
 var path    =   require( 'path' );
-var http    =   require('http');
+var http    =   require( 'http' );
+var data    =   require( './data/data');
 var app     =   express();
 
 app.configure( function() {
