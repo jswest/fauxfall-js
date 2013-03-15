@@ -32,7 +32,8 @@ h1.smile {
   -o-transition: transform 5s linear;
   transition: transform 5s linear; }
 
-#content {
+.structure {
+  background-color: #f0f0f0;
   margin: 0 auto;
   padding: 0 20px;
   width: 900px; }
@@ -85,3 +86,48 @@ img {
       margin: 0 20px 20px 0;
       width: 380px;
       height: auto; }
+
+header#primary-nav-wrapper {
+  margin-left: -470px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 940px;
+  height: 50px; }
+  header#primary-nav-wrapper hgroup {
+    display: none;
+    float: left;
+    width: 100%;
+    height: 50px; }
+    header#primary-nav-wrapper hgroup h1 {
+      font-family: "League Gothic";
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400; }
+  header#primary-nav-wrapper ul {
+    float: left;
+    width: 100%;
+    height: 50px; }
+    header#primary-nav-wrapper ul li {
+      background: gainsboro;
+      cursor: pointer;
+      display: none;
+      list-style: none;
+      line-height: 50px;
+      float: left;
+      font-family: "League Gothic";
+      font-size: 20px;
+      font-style: italic;
+      line-height: 50px;
+      overflow: hidden;
+      text-align: center;
+      text-transform: uppercase;
+      height: 50px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    header#primary-nav-wrapper ul li:hover {
+      background-color: #c8c8c8; }

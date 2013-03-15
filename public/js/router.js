@@ -1,11 +1,21 @@
 $(document).ready( function() {
   
+  var add_primary_menu = function() {
+    if( $('#primary-menu-wrapper').length < 1 ) {
+      var primary_nav = new window.SectionListView();
+      primary_nav.render();      
+    }
+  }
+  
+  
   window.AppRouter = Backbone.Router.extend({
     routes: {
       '': 'home',
       'pages/about': 'about',
     },
     home: function() {
+      window.current_position = 0;
+      add_primary_menu();
     },
     about: function() {
       var about_page = new window.AboutPage();

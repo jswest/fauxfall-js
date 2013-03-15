@@ -9,6 +9,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js" type="text/javascript"></script>
     <script src="js/lib.js" type="text/javascript"></script>
 		<script src="js/page.js" type="text/javascript"></script>
+		<script src="js/section.js" type="text/javascript"></script>
     <script src="js/router.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -29,8 +30,17 @@
 		<% } %>
 	</div>
 </script>
-<header id="primary-nav-wrapper"></header>
-<div id="content"><h1 class="smile">:)</h1></div>
-<footer id="secondary-nav-wrapper"></footer>
+<script id="primary-nav-template" type="text/template">
+	<hgroup>
+		<h1>The Robot Will See You Now</h1>
+	</hgroup>
+	<ul id="primary-menu"></ul>
+</script>
+<script id="section-li-template" type="text/template">
+	<%= title %>
+</script>
+<header id="primary-nav-wrapper" class="structure"></header>
+<div id="content" class="structure"><h1 class="smile">:)</h1></div>
+<footer id="secondary-nav-wrapper" class="structure"></footer>
 	</body>
 </html>

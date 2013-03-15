@@ -20,11 +20,18 @@ app.configure( 'development', function(){
 });
 
 app.get( '/pages/about', function( req, res ) {
-  console.log( "/pages/about" );
+  console.log( "/pages/about..." );
   res.writeHead( 200, { 'Content-Type': 'application/json' } );
   res.write( JSON.stringify( data.pages.about ) );
   res.end();
-  console.log( "SERVED!" );
+  console.log( "...is served.\n" );
+});
+app.get( '/sections/list', function( req, res ) {
+  console.log( "/sections/list..." );
+  res.writeHead( 200, { 'Content-Type': 'application/json' } );
+  res.write( JSON.stringify( data.article ) );
+  res.end();
+  console.log( "...is served.\n" );
 });
 
 
