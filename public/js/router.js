@@ -3,7 +3,7 @@ $(document).ready( function() {
   var add_primary_menu = function() {
     if( $('#primary-menu-wrapper').length < 1 ) {
       var primary_nav = new window.SectionListView();
-      primary_nav.render();      
+      primary_nav.render();
     }
   }
   
@@ -16,6 +16,8 @@ $(document).ready( function() {
     home: function() {
       window.current_position = 0;
       add_primary_menu();
+      var content_header = new window.HeaderView();
+      content_header.render();
     },
     about: function() {
       var about_page = new window.AboutPage();

@@ -44,7 +44,8 @@ img {
   height: auto; }
 
 .page {
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
+  padding-bottom: 50px;
   width: 600px; }
   .page header.page-header {
     border-bottom: 1px solid black;
@@ -77,10 +78,10 @@ img {
       left: 20px;
       z-index: 2; }
       .page article header h1 {
-        font-family: "League Gothic";
+        font-family: "Militia Sans Fat Italic";
         font-size: 50px;
-        font-style: normal;
-        font-weight: 400; }
+        font-style: italic;
+        font-weight: 800; }
     .page article img {
       float: left;
       margin: 0 20px 20px 0;
@@ -110,7 +111,8 @@ header#primary-nav-wrapper {
     width: 100%;
     height: 50px; }
     header#primary-nav-wrapper ul li {
-      background: gainsboro;
+      background: #c80000;
+      color: white;
       cursor: pointer;
       display: none;
       list-style: none;
@@ -124,10 +126,53 @@ header#primary-nav-wrapper {
       text-align: center;
       text-transform: uppercase;
       height: 50px;
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s; }
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      -ms-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
     header#primary-nav-wrapper ul li:hover {
-      background-color: #c8c8c8; }
+      background-color: #960000; }
+
+header#content-header {
+  display: none;
+  margin-top: 50px;
+  position: relative;
+  width: 100%; }
+  header#content-header .gloss {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 940px;
+    height: 100%;
+    z-index: 0; }
+  header#content-header h1 {
+    color: white;
+    font-family: "Militia Sans Fat Italic";
+    font-size: 150px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 130px;
+    margin-top: -250px;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    width: 100%;
+    height: 390px;
+    z-index: 1; }
+  header#content-header h2 {
+    color: white;
+    font-family: "Militia Sans Fat Italic";
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: 100px;
+    z-index: 2; }
