@@ -17,9 +17,19 @@ $(document).ready( function() {
       window.current_position = 0;
       add_primary_menu();
       var content_header = new window.HeaderView();
-      content_header.render();
+      var section = new window.Section( { id: window.current_position } );
+      section.fetch({
+        success: function() {
+          var section_view = new window.SectionView( { model: section } );
+          var content_timer = setTimeout( function() {
+            content_header.render();
+            section_view.render();
+          }, 2000 );          
+        }
+      });
     },
     about: function() {
+      window.current_position = 0;
       var about_page = new window.AboutPage();
       about_page.fetch({
         success: function() {

@@ -33,6 +33,14 @@ app.get( '/sections/list', function( req, res ) {
   res.end();
   console.log( "...is served.\n" );
 });
+app.get( '/sections/:id', function( req, res) {
+  var id = req.params.id;
+  console.log( "/sections/" + id + "...");
+  res.writeHead( 200, { 'Content-Type': 'application/json' } );
+  res.write( JSON.stringify( data.article[id] ) );
+  res.end();
+  console.log( "...is served.\n" );
+});
 
 
 http.createServer( app ).listen( app.get( 'port' ), function() {
