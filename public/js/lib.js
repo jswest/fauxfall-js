@@ -19,14 +19,17 @@ window.Smile = function() {
   this.smile();
 }
 
-window.Fader = function( img ) {
+window.Fader = function( img, needs_wrapper ) {
   var _this = this;
   
   this.img = img;
+  this.needs_wrapper = needs_wrapper;
   
   this.manipulate = function() {
-    _this.img.wrap( "<div class='fader-wrapper' />" );
-    _this.img.before( "<div class='gloss' />" );
+    if( _this.needs_wrapper ) {
+      _this.img.wrap( "<div class='fader-wrapper' />" );
+      _this.img.before( "<div class='gloss' />" );
+    }
     _this.img.parent().css({
       'float': _this.img.css( 'float' ),
       'margin-top': _this.img.css( 'margin-top' ),

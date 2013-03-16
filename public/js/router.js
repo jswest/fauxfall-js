@@ -20,6 +20,7 @@ $(document).ready( function() {
       var section = new window.Section( { id: window.current_position } );
       section.fetch({
         success: function() {
+          $('#content').html( '' );
           var section_view = new window.SectionView( { model: section } );
           var content_timer = setTimeout( function() {
             content_header.render();
