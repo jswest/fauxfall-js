@@ -7,8 +7,8 @@ window.HeaderView = Backbone.View.extend({
     $('#content').html( $(this.el).html( template ) );
     $(this.el).height( $(window).height() - 50 );
     $(this.el).fadeIn( 1000 );
-  }
+  },
   parallax: function() {
-    
+
   }
-}); 
+});
