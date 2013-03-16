@@ -1,14 +1,14 @@
-$(document).ready( function() {
-  
+define(function () {
+
   var add_primary_menu = function() {
     if( $('#primary-menu-wrapper').length < 1 ) {
       var primary_nav = new window.SectionListView();
       primary_nav.render();
     }
   }
-  
-  
-  window.AppRouter = Backbone.Router.extend({
+
+
+  var AppRouter = Backbone.Router.extend({
     routes: {
       '': 'home',
       'pages/about': 'about',
@@ -24,7 +24,7 @@ $(document).ready( function() {
           var content_timer = setTimeout( function() {
             content_header.render();
             section_view.render();
-          }, 2000 );          
+          }, 2000 );
         }
       });
     },
@@ -39,7 +39,6 @@ $(document).ready( function() {
       });
     }
   });
-  var router = new window.AppRouter();
-  Backbone.history.start();
-  
+
+  return AppRouter;
 });
