@@ -9,7 +9,9 @@ window.HeaderView = Backbone.View.extend({
     $(this.el).fadeIn( 1000 );
   },
   colorizer: function() {
-    if( $(window).scrollTop() == $(window).height() )
+    if( $(window).scrollTop() > $(window).height() ) {
+      
+    }
   },
   bind_colorizer: function() {
     $(window).on( 'scroll', this.colorizer );
