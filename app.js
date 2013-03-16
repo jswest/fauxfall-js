@@ -21,20 +21,14 @@ app.configure( 'development', function(){
 });
 
 app.get( '/pages/about', function( req, res ) {
-  res.writeHead( 200, { 'Content-Type': 'application/json' } );
-  res.write( JSON.stringify( data.pages.about ) );
-  res.end();
+  res.send( data.pages.about );
 });
 app.get( '/sections/list', function( req, res ) {
-  res.writeHead( 200, { 'Content-Type': 'application/json' } );
-  res.write( JSON.stringify( data.article ) );
-  res.end();
+  res.send( data.article );
 });
 app.get( '/sections/:id', function( req, res) {
   var id = req.params.id;
-  res.writeHead( 200, { 'Content-Type': 'application/json' } );
-  res.write( JSON.stringify( data.article[id] ) );
-  res.end();
+  res.send( data.article[id] );
 });
 
 
