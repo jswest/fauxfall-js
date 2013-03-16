@@ -16,4 +16,4 @@ window.HeaderView = Backbone.View.extend({
   bind_colorizer: function() {
     $(window).on( 'scroll', this.colorizer );
   }
-}); 
+});
