@@ -1,4 +1,4 @@
-define(function() {
+define( ['views/art-view', 'models/art'], function( ArtView, Art ) {
 
 	var SectionView = Backbone.View.extend({
     tagName: 'section',
@@ -12,11 +12,11 @@ define(function() {
       this.paragraph_views = [];
       for( var i = 0; i < paragraphs.length; i++ ) {
         var paragraph_body = paragraphs[i];
-        var p = new window.Paragraph({
+        var p = new Paragraph({
           body: paragraph_body,
           parent: $(this.el)
         });
-        var pv = new window.ParagraphView( { model: p } );
+        var pv = new ParagraphView( { model: p } );
         pv.render();
         this.paragraph_views.push( pv );
       }
@@ -25,17 +25,17 @@ define(function() {
     add_art_recursively: function( iteration ) {
       var _this = this;
       if( _this.paragraph_views.length > iteration ) {
-        var a = new window.Art({
+        var a = new Art({
           section_id: this.model.get( 'id' ),
           id: iteration / 3,
           sibling: $(_this.paragraph_views[iteration].el)
         });
         a.fetch({
           success: function() {
-            var av = new window.ArtView( { model: a } );
+            var av = new ArtView( { model: a } );
             av.render();
             $(av.el).find( 'img' ).on( 'load', function() {
-              var fader = new window.Fader( $(av.el).find('img'), false );
+              var fader = new Fader( $(av.el).find('img'), false );
               fader.init();
             });
             _this.add_art_recursively( iteration + 3 );

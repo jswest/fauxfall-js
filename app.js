@@ -33,19 +33,15 @@ app.get( '/sections/:id', function( req, res) {
 app.get( '/art/:section_id/:id', function( req, res ) {
   var id = parseInt( req.params.id );
   var section_id = parseInt( req.params.section_id );
-  console.log( "/art/" + section_id + "/" + id + "..." );
-  res.writeHead( 200, { 'Content-Type': 'application/json' } );
   var number_of_paragraphs = 0;
   var actual_art_limit = data.art.length;
   for( var i = 0; i <= section_id; i++ ) {
+    console.log('looping');
     if( id + number_of_paragraphs < actual_art_limit && i == section_id ) {
-      console.log( 'here' );
-      res.write( JSON.stringify( data.art[ id + number_of_paragraphs] ) );
+      res.send( data.art[ id + number_of_paragraphs] );
     }
     number_of_paragraphs = number_of_paragraphs + data.article[i].body.length;
   }
-  res.end();
-  console.log( "...is served.\n" );
 });
 
 

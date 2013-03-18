@@ -11,7 +11,7 @@ define(function(AboutPage) {
       $('#content').html( $(this.el).html( primary_template ) );
       $('#content').find('img').each( function() {
         $(this).on( 'load', function() {
-          var f = new window.Fader( $(this) );
+          var f = new window.Fader( $(this), true );
           f.init();
         })
       });
