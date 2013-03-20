@@ -11,6 +11,7 @@ define([
       if( $('#primary-menu-wrapper').length < 1 ) {
         var primary_nav = new SectionListView();
         primary_nav.render();
+        $('h1.smile').remove();
       }
     }
 
@@ -27,10 +28,8 @@ define([
         section.fetch({
           success: function() {
             var section_view = new SectionView( { model: section } );
-            var content_timer = setTimeout( function() {
-              content_header.render();
-              section_view.render();
-            }, 2000 );
+            content_header.render();
+            section_view.render();
           }
         });
       },

@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0; }
 
+h1.smile {
+  font-family: "Helvetica Neue", "Helvetica";
+  font-style: normal; }
+
 h1 {
   font-family: "Militia Sans Fat Italic";
   font-style: italic;
@@ -13,30 +17,6 @@ p {
   font-family: "Garamond";
   font-size: 17px;
   line-height: 30px; }
-
-h1.smile {
-  font-family: "Times New Roman", "Times", serif;
-  font-size: 50px;
-  font-weight: 800;
-  line-height: 50px;
-  margin: -25px 0 0 -25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  -webkit-transition: transform 5s linear;
-  -moz-transition: transform 5s linear;
-  -ms-transition: transform 5s linear;
-  -o-transition: transform 5s linear;
-  transition: transform 5s linear; }
-
-.structure {
-  background-color: #f0f0f0;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 900px; }
 
 img {
   display: block;
@@ -126,29 +106,17 @@ header#primary-nav-wrapper {
       background-color: #960000; }
 
 #content-header-wrapper {
-  margin: 50px 0 0 0;
-  padding: 0;
+  position: relative;
+  top: 0;
   width: 100%; }
 
 header#content-header {
+  background-color: red;
   display: none;
+  padding-top: 100px;
   position: relative;
+  top: 0;
   width: 100%; }
-  header#content-header .gloss-gloss {
-    background-color: black;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2; }
-  header#content-header .gloss {
-    background-color: red;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; }
   header#content-header h1 {
     color: white;
     font-family: "Militia Sans Fat Italic";
@@ -156,11 +124,9 @@ header#content-header {
     font-style: italic;
     font-weight: 800;
     line-height: 130px;
-    margin-top: -250px;
-    margin-left: -470px;
-    position: absolute;
-    top: 30%;
-    left: 50%;
+    margin: 0 auto 50px auto;
+    position: relative;
+    top: 0;
     text-align: center;
     text-shadow: 0px 0px 10px black;
     width: 940px;
@@ -175,8 +141,6 @@ header#content-header {
     text-align: center;
     text-shadow: 0px 0px 10px black;
     text-transform: uppercase;
-    position: absolute;
-    top: 50%;
     width: 100%;
     height: 100px;
     z-index: 2; }
@@ -185,10 +149,9 @@ header#content-header {
   background-color: transparent; }
 
 .article-section {
-  margin: 0 auto;
   padding: 0 0 50px 0;
   position: relative;
-  width: 600px; }
+  width: 100%; }
   .article-section header.section-header {
     background-color: black;
     position: relative;
@@ -206,7 +169,8 @@ header#content-header {
       width: 100%;
       height: 100px; }
   .article-section .section-content p {
-    margin: 30px 0; }
+    margin: 30px auto;
+    width: 600px; }
   .article-section .section-content p:first-child:first-letter {
     display: block;
     float: left;
@@ -216,12 +180,3 @@ header#content-header {
     font-size: 200px;
     line-height: 200px;
     height: 200px; }
-  .article-section .section-content .art-wrapper img.art {
-    float: left;
-    margin: 0 20px 20px 0;
-    width: 380px;
-    height: auto; }
-  .article-section .section-content .art-wrapper header.art-header {
-    display: none;
-    position: absolute;
-    bottom: 20px; }
