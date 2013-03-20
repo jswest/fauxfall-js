@@ -20,7 +20,7 @@ define( ['views/art-view', 'models/art'], function( ArtView, Art ) {
         pv.render();
         this.paragraph_views.push( pv );
       }
-      this.add_art_recursively( 0 );
+      //this.add_art_recursively( 0 );
     },
     add_art_recursively: function( iteration ) {
       var _this = this;

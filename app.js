@@ -30,6 +30,7 @@ app.get( '/sections/:id', function( req, res) {
   var id = req.params.id;
   res.send( data.article[id] );
 });
+/*
 app.get( '/art/:section_id/:id', function( req, res ) {
   var id = parseInt( req.params.id );
   var section_id = parseInt( req.params.section_id );
@@ -43,6 +44,7 @@ app.get( '/art/:section_id/:id', function( req, res ) {
     number_of_paragraphs = number_of_paragraphs + data.article[i].body.length;
   }
 });
+*/
 
 
 http.createServer( app ).listen( app.get( 'port' ), function() {
