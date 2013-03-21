@@ -24,16 +24,15 @@ define( ['views/art-view', 'models/art', 'models/section'], function( ArtView, A
     },
     on_deck: function() {
       var _this = this;
-      if( $(window).scrollTop() > $(this.el).scrollTop() + $(this.el).height() - 100 ) {
-        window.current_position++;
-        var section = new Section( { id: window.current_position } );
+      if( $(window).scrollTop() > $('body').height() - $(window).height() - 100 ) {
+        $(window).off( 'scroll', _this.on_deck );
+        var section = new Section( { id: window.current_position + 1 } );
         section.fetch({
           success: function() {
             var section_view = new SectionView( { model: section } );
             section_view.render();
           }
         });
-        $(window).off( 'scroll', _this.on_deck );
       }
     }
   });

@@ -104,6 +104,10 @@ header#primary-nav-wrapper {
       transition: all 0.25s; }
     header#primary-nav-wrapper ul li:hover {
       background-color: #960000; }
+    header#primary-nav-wrapper ul li.current {
+      background-color: #960000; }
+    header#primary-nav-wrapper ul li.current:hover {
+      background-color: #640000; }
 
 #content-header-wrapper {
   position: relative;
