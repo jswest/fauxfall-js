@@ -20,6 +20,13 @@ this.article = [
         body: "Did Lukov ultimately get the right treatment? Did his oncologist make the connection between KRAS and his condition, and order the test? He might have, if Lukov were a real patient and the oncologist were a real doctor. They're not. They are fictional composites developed by researchers at the Memorial Sloan-Kettering Cancer Center in New York, in order to help train—and demonstrate the skills of—IBM's Watson supercomputer. Yes, this is the same Watson that famously went on Jeopardy and beat two previous human champions. But IBM didn't build Watson to win game shows. The company is developing Watson to help professionals with complex decision making, like the kind that occurs in oncologists' offices—and to point out clinical nuances that health professionals might miss on their own."
       },
       {
+        type: "art",
+        src: 'images/art-0.jpg',
+        title: "Wonders of0 Today",
+        year: '2007',
+        byline: "Tamar Cohen"
+      },
+      {
         type: "paragraph",
         body: "Information technology that helps doctors and patients make decisions has been around for a long time. Crude online tools like WebMD get millions of visitors a day. But Watson is a different beast. According to IBM, it can digest information and make recommendations much more quickly, and more intelligently, than perhaps any machine before it—processing up to 60 million pages of text per second, even when that text is in the form of plain old prose, or what scientists call \"natural language.\""
       },
@@ -30,6 +37,13 @@ this.article = [
       {
         type: "paragraph",
         body: "Medicine has never before had a tool quite like this. And at an unofficial coming-out party in Las Vegas last year, during the annual meeting of the Healthcare Information and Management Systems Society, more than 1,000 professionals packed a large hotel conference hall, and an overflow room nearby, to hear a presentation by Marty Kohn, an emergency-room physician and a clinical leader of the IBM team training Watson for health care. Standing before a video screen that dwarfed his large frame, Kohn described in his husky voice how Watson could be a game changer—not just in highly specialized fields like oncology but also in primary care, given that all doctors can make mistakes that lead to costly, sometimes dangerous, treatment errors."
+      },
+      {
+        type: "art",
+        src: 'images/art-1.jpg',
+        title: "Rex",
+        year: '2006',
+        byline: "Tamar Cohen"
       },
       {
         type: "paragraph",
@@ -54,6 +68,13 @@ this.article = [
         body: "The Cleveland Clinic is also helping to develop Watson, first as a tool for training young physicians and then, possibly, as a tool at the bedside itself. James Young, the executive dean of the Cleveland Clinic medical school, told The Plain Dealer, \"If we can get Watson to give us information in the health-care arena like we've seen with more-general sorts of knowledge information, I think it's going to be an extraordinary tool for clinicians and a huge advancement.\" And WellPoint, the insurance company, has already begun testing Watson as a support tool for nurses who make treatment-approval decisions."
       },
       {
+        type: "art",
+        src: 'images/art-2.jpg',
+        title: "The Etiquette",
+        year: '2007',
+        byline: "Tamar Cohen"
+      },
+      {
         type: "paragraph",
         body: "Whether these experiments show real, quantifiable improvements in the quality or efficiency of care remains to be seen. If Watson tells physicians only what they already know, or if they end up ordering many more tests for no good reason, Watson could turn out to be more hindrance than help. But plenty of serious people in the fields of medicine, engineering, and business think Watson will work (IBM says that it could be widely available within a few years). And many of these same people believe that this is only the beginning—that whether or not Watson itself succeeds, it is emblematic of a quantum shift in health care that's just now getting under way."
       },
@@ -76,6 +97,13 @@ this.article = [
       {
         type: "paragraph",
         body: "But even if data technology does nothing more than arm health-care professionals with tablet computers that help them make decisions, the effect could still be profound. Harvey Fineberg, the former dean of the Harvard School of Public Health and now the president of the Institute of Medicine, wrote of IT's rising promise last year in The New England Journal of Medicine, describing a health-care system that might be transformed by artificial intelligence, robotics, bioinformatics, and other advances. Tools like Watson could enhance the abilities of professionals at every level, from highly specialized surgeons to medical assistants. As a result, physicians wouldn't need to do as much, and each class of professionals beneath them could take on greater responsibility—creating a financially sustainable way to meet the aging population's growing need for more health care."
+      },
+      {
+        type: "art",
+        src: 'images/art-3.jpg',
+        title: "The Busy Bee",
+        year: '2007',
+        byline: "Tamar Cohen"
       },
       {
         type: "paragraph",
@@ -124,6 +152,13 @@ this.article = [
         body: "As more and more data are captured, and as computers become better and faster at processing them autonomously, the possibilities keep expanding. One medical-data start-up getting some buzz is a company called Predictive Medical Technologies, based in San Francisco. It is developing a program that sucks in all the data generated in a hospital's intensive-care unit, plugs the information into an algorithm, and then identifies which patients are likely to experience a heart attack or other forms of distress—providing up to 24 hours of warning. A trial is under way at the University of Utah's hospital in Salt Lake City. The eventual goal is to expand the program's capabilities, so that it can monitor conditions throughout the hospital. \"You don't just want more data,\" Kraft says. \"You want actual information in a form you can use. You need to be able to make sense of this stuff. That's what companies like Predictive Medical do.\""
       },
       {
+        type: "art",
+        src: 'images/art-4.jpg',
+        title: "Fun Time Knits",
+        year: '2007',
+        byline: "Tamar Cohen"
+      },
+      {
         type: "paragraph",
         body: "Watson \"fills in for some human limitations,\" says IBM's Marty Kohn, a physician, who emphasizes that Watson is being developed to support doctors, not replace them. (Kareem Black)",
       },
@@ -142,6 +177,13 @@ this.article = [
       {
         type: "paragraph",
         body: "Sometimes, of course, office or hospital visits would be necessary, but that experience would be different, too—starting with the hassle of dealing with insurance companies. Watson has a button for submitting treatment proposals to managed-care companies, for near-instant approval, reducing the time and hassle involved in gaining payment authorization. The transformation of the clinical experience could be more profound, although you might not detect it: someone in a white coat or blue scrubs would still examine you, perform tests, prescribe treatment. But that person might have a different background than he'd have today. And as the two of you talked, your exam information would be uploaded and cross-referenced against your medical record (including the data from all those wireless monitors you've been toting around), your DNA, and untold pages of clinical literature."
+      },
+      {
+        type: "art",
+        src: 'images/art-5.jpg',
+        title: "Fun with Spools",
+        year: '2008',
+        byline: "Tamar Cohen"
       },
       {
         type: "paragraph",
@@ -236,44 +278,7 @@ this.article = [
     ]
   }
 ];
-this.art = [
-  {
-    src: 'images/art-0.jpg',
-    title: "Wonders of0 Today",
-    year: '2007',
-    byline: "Tamar Cohen"
-  },
-  {
-    src: 'images/art-1.jpg',
-    title: "Rex",
-    year: '2006',
-    byline: "Tamar Cohen"
-  },
-  {
-    src: 'images/art-2.jpg',
-    title: "The Etiquette",
-    year: '2007',
-    byline: "Tamar Cohen"
-  },
-  {
-    src: 'images/art-3.jpg',
-    title: "The Busy Bee",
-    year: '2007',
-    byline: "Tamar Cohen"
-  },
-  {
-    src: 'images/art-4.jpg',
-    title: "Fun Time Knits",
-    year: '2007',
-    byline: "Tamar Cohen"
-  },
-  {
-    src: 'images/art-5.jpg',
-    title: "Fun with Spools",
-    year: '2008',
-    byline: "Tamar Cohen"
-  }
-];
+
 this.pages = {
   about: {
     title: 'About',

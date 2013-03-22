@@ -1,4 +1,20 @@
-define( ['views/art-view', 'models/art', 'models/section'], function( ArtView, Art, Section ) {
+define(
+  [
+    'views/paragraph-view',
+    'models/paragraph',
+    'views/art-view',
+    'models/art',
+    'models/section',
+    'collections/section-guts'
+  ], 
+    function(
+      ParagraphView,
+      Paragraph,
+      ArtView,
+      Art,
+      Section,
+      SectionGuts
+    ) {
 
 	var SectionView = Backbone.View.extend({
     tagName: 'section',
@@ -12,12 +28,13 @@ define( ['views/art-view', 'models/art', 'models/section'], function( ArtView, A
       section_guts = new SectionGuts( this.model.get( 'body' ) );
       section_guts.each( function( item ) {
         item.set( 'parent', $(_this.el) );
-        var item_view = new ParagraphView( { model: item } );
+        if( item.get( 'type') == 'paragraph' ) {
+          var item_view = new ParagraphView( { model: item } );
+        } else {
+          var item_view = new ArtView( { model: item } );
+        }
         item_view.render();        
       });
-      console.log( 'wcp: ' +  window.current_position );
-      console.log( 'asl: ' + $('.article-section').length );
-      console.log( 'id: ' + this.model.get( 'id' ) );
       if( $('.article-section').length >  window.current_position - 2 ) {
         $(window).on( 'scroll', this.on_deck );
       } else if( $('.article-section').length == window.current_position - 2 ) {
@@ -40,19 +57,7 @@ define( ['views/art-view', 'models/art', 'models/section'], function( ArtView, A
     }
   });
 
-	var Paragraph = Backbone.Model.extend();
 
-  var SectionGuts = Backbone.Collection.extend({
-    model: Paragraph
-  });
-
-	var ParagraphView = Backbone.View.extend({
-	  tagName: 'p',
-	  initialize: function() { _.bindAll( this, 'render' ); },
-	  render: function() {
-	    this.model.get( 'parent' ).find('.section-content').append( $(this.el).html( this.model.get( 'body' ) ) );
-	  }
-	});
 
 	return SectionView;
 });
