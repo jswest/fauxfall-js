@@ -1,28 +1,3 @@
-/*know_location: function() {
-  var _this = this;
-  var current = $('.article-section').eq( window.current_position );
-  if( (typeof( current.offset() ) == 'undefined') == false  ) {
-    var top = current.offset().top;
-    var bottom = current.offset().top + current.height();
-    if( $(window).scrollTop() < top ) {
-      if( window.current_position > 0 ) {
-        console.log( 'before!' );
-        window.current_position--;
-        $(_this.el).find( 'li' ).removeClass( 'current' );
-        $(_this.el).find( 'li' ).eq( window.current_position ).addClass( 'current' );
-        Backbone.history.navigate( '#section/' + window.current_position, false );
-      }
-    } else if( $(window).scrollTop() > bottom ) {
-      console.log( 'after!' );
-      window.current_position++;
-      $(_this.el).find( 'li' ).removeClass( 'current' );
-      $(_this.el).find( 'li' ).eq( window.current_position ).addClass( 'current' );
-      Backbone.history.navigate( '#section/' + window.current_position, false );
-    } else {
-    }
-  }
-}*/
-
 window.Locator = function() {
   var _this = this;
   
@@ -34,19 +9,22 @@ window.Locator = function() {
       if( $(window).scrollTop() < top ) {
         if( window.current_position > 0 ) {
           window.current_position--;
-          $('nav#primary-menu').find( 'li' ).removeClass( 'current' );
-          $('nav#primary-menu').find( 'li' ).eq( window.current_position ).addClass( 'current' );
+          _this.update_menu();
           Backbone.history.navigate( '#section/' + window.current_position, false );
         }
       } else if( $(window).scrollTop() > bottom ) {
-        window.current_position++;
-        $('nav#primary-menu').find( 'li' ).removeClass( 'current' );
-        $('nav#primary-menu').find( 'li' ).eq( window.current_position ).addClass( 'current' );
+        window.current_position = parseInt( window.current_position ) + 1;
+        _this.update_menu();
         Backbone.history.navigate( '#section/' + window.current_position, false );
       } else {
       }
     }
   }
+  this.update_menu = function() {
+    $('nav#primary-menu').find( 'li' ).removeClass( 'current' );
+    $('nav#primary-menu').find( 'li' ).eq( window.current_position ).addClass( 'current' );    
+  }
+  
   this.bind = function() {
     $(window).on( 'scroll', _this.listen );
   }
@@ -120,6 +98,6 @@ window.Fader = function( img, needs_wrapper ) {
 
 
 $(document).ready( function() {
-  var l = new window.Locator();
-  l.init();
+  window.l = new window.Locator();
+  window.l.init();
 });

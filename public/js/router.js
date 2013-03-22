@@ -64,6 +64,7 @@ define([
             });
           } else {
             $(window).scrollTop( $('.article-section').eq( window.current_position ).offset().top + 1 );
+            window.l.update_menu();
           }
         }
         render_section( sections );
