@@ -190,3 +190,29 @@ header#content-header {
     font-size: 200px;
     line-height: 200px;
     height: 200px; }
+  .article-section .section-content .art-wrapper {
+    margin: 30px auto;
+    position: relative;
+    width: 600px; }
+    .article-section .section-content .art-wrapper img {
+      margin: 30px auto;
+      position: relative;
+      width: 100%;
+      height: auto;
+      z-index: 1; }
+    .article-section .section-content .art-wrapper header {
+      background-color: black;
+      color: white;
+      display: none;
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      height: 100px; }
+      .article-section .section-content .art-wrapper header h1,
+      .article-section .section-content .art-wrapper header h2,
+      .article-section .section-content .art-wrapper header h3 {
+        font-family: "League Gothic";
+        font-weight: 400; }
+  .article-section .section-content .art-wrapper:hover header {
+    display: block; }

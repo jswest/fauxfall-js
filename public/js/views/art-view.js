@@ -4,11 +4,11 @@ define(function() {
     className: 'art-wrapper',
     initialize: function() { _.bindAll( this, 'render' ); },
     render: function() {
-      console.log( this.model.toJSON() );
+      var _this = this;
       var template = _.template( $('#art-template').html(), this.model.toJSON() );
-      this.model.get( 'sibling' ).after( $(this.el).html( template ) );
-      $(this.el).on( 'load', function() {
-        var fader = new window.Fader( $(this.el), false );
+      this.model.get( 'parent' ).find('.section-content').append( $(this.el).html( template ) );
+      $(this.el).find('img').on( 'load', function() {
+        var fader = new window.Fader( $(_this.el).find('img'), false );
         fader.init();  
       });
     }

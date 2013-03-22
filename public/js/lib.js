@@ -35,7 +35,7 @@ window.Locator = function() {
 
 window.Fader = function( img, needs_wrapper ) {
   var _this = this;
-  
+    
   this.img = img;
   this.needs_wrapper = needs_wrapper;
   
@@ -44,16 +44,6 @@ window.Fader = function( img, needs_wrapper ) {
       _this.img.wrap( "<div class='fader-wrapper' />" );
       _this.img.before( "<div class='gloss' />" );
     }
-    _this.img.parent().css({
-      'float': _this.img.css( 'float' ),
-      'margin-top': _this.img.css( 'margin-top' ),
-      'margin-right': _this.img.css( 'margin-right' ),
-      'margin-bottom': _this.img.css( 'margin-bottom' ),
-      'margin-left': _this.img.css( 'margin-left' ),
-      'position': 'relative',
-      'width': _this.img.width(),
-      'height': _this.img.height()
-    });
   }
   this.gloss = function() {
     _this.img.parent().find( '.gloss' ).css({
