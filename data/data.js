@@ -4,6 +4,7 @@ this.headers = {
 },
 this.article = [
   {
+    id: 0,
     title: "Lorem Ipsum",
     body: [
       "Harley Lukov didn't need a miracle. He just needed the right diagnosis. <span data-id='0' class='clickable slideshow'>Lukov</span>, a 62-year-old from central New Jersey, had stopped smoking 10 years earlier—fulfilling a promise he'd made to his daughter, after she gave birth to his first grandchild. But decades of cigarettes had taken their toll. Lukov had adenocarcinoma, a common cancer of the lung, and it had spread to his liver. The oncologist ordered a biopsy, testing a surgically removed sample of the tumor to search for particular \"driver\" mutations. A driver mutation is a specific genetic defect that causes cells to reproduce uncontrollably, interfering with bodily functions and devouring organs. Think of an on/off switch stuck in the \"on\" direction. With lung cancer, doctors typically test for mutations called EGFR and ALK, in part because those two respond well to specially targeted treatments. But the tests are a long shot: although EGFR and ALK are the two driver mutations doctors typically see with lung cancer, even they are relatively uncommon. When Lukov's cancer tested negative for both, the oncologist prepared to start a standard chemotherapy regimen—even though it meant the side effects would be worse and the prospects of success slimmer than might be expected using a targeted agent.",
@@ -17,6 +18,7 @@ this.article = [
     ]
   },
   {
+    id: 1,
     title: "The Watson Media Hype",
     body: [
       "Watson has gotten some media hype already, including articles in Wired and Fast Company. Still, you probably shouldn't expect to see it the next time you visit your doctor's office. Before the computer can make real-life clinical recommendations, it must learn to understand and analyze medical information, just as it once learned to ask the right questions on Jeopardy. That's where Memorial Sloan-Kettering comes in. The famed cancer institute has signed up to be Watson's tutor, feeding it clinical information extracted from real cases and then teaching it how to make sense of the data. \"The process of pulling out two key facts from a Jeopardy clue is totally different from pulling out all the relevant information, and its relationships, from a medical case,\" says Ari Caroline, Sloan-Kettering's director of quantitative analysis and strategic initiatives. \"Sometimes there is conflicting information. People phrase things different ways.\" But Caroline, who approached IBM about the research collaboration, nonetheless predicts that Watson will prove \"very valuable\"—particularly in a field like cancer treatment, in which the explosion of knowledge is already overwhelming. \"If you're looking down the road, there are going to be many more clinical options, many more subtleties around biomarkers … There will be nuances not just in interpreting the case but also in treating the case,\" Caroline says. \"You're going to need a tool like Watson because the complexity and scale of information will be such that a typical decision tool couldn't possibly handle it all.\"",
@@ -37,6 +39,7 @@ this.article = [
     ]
   },
   {
+    id: 2,
     title: "Dolor Sit Amet Nunc Amos",
     body: [
       "Ari Caroline and his colleagues at Sloan-Kettering are leading Watson's training in cancer care. \"You're going to need a tool like Watson,\" he says, given the rapidly increasing complexity of the field. (Kareem Black)",
@@ -54,6 +57,7 @@ this.article = [
     ]
   },
   {
+    id: 3,
     title: "Borgified Obamacare",
     body: [
       "Under the Affordable Care Act, a k a \"Obamacare,\" Medicare will also begin rewarding providers who form integrated organizations, like Group Health Cooperative of Puget Sound, and groups that accept \"bundled\" payments, so that they are paid based on the number of patients in their care rather than for each service rendered. In theory, this financing scheme should encourage medical practices and hospitals to keep patients healthier over the long term, even if that means spending money up front on technology in order to reduce the frequency of patient visits or procedures. In other words, the new, digital model for health care should eventually become more economically viable.",

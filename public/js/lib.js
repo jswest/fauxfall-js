@@ -1,3 +1,60 @@
+/*know_location: function() {
+  var _this = this;
+  var current = $('.article-section').eq( window.current_position );
+  if( (typeof( current.offset() ) == 'undefined') == false  ) {
+    var top = current.offset().top;
+    var bottom = current.offset().top + current.height();
+    if( $(window).scrollTop() < top ) {
+      if( window.current_position > 0 ) {
+        console.log( 'before!' );
+        window.current_position--;
+        $(_this.el).find( 'li' ).removeClass( 'current' );
+        $(_this.el).find( 'li' ).eq( window.current_position ).addClass( 'current' );
+        Backbone.history.navigate( '#section/' + window.current_position, false );
+      }
+    } else if( $(window).scrollTop() > bottom ) {
+      console.log( 'after!' );
+      window.current_position++;
+      $(_this.el).find( 'li' ).removeClass( 'current' );
+      $(_this.el).find( 'li' ).eq( window.current_position ).addClass( 'current' );
+      Backbone.history.navigate( '#section/' + window.current_position, false );
+    } else {
+    }
+  }
+}*/
+
+window.Locator = function() {
+  var _this = this;
+  
+  this.listen = function() {
+    var current = $('.article-section').eq( window.current_position );
+    if( current.length > 0 ) {
+      var top = current.offset().top;
+      var bottom = current.offset().top + current.height();
+      if( $(window).scrollTop() < top ) {
+        if( window.current_position > 0 ) {
+          window.current_position--;
+          $('nav#primary-menu').find( 'li' ).removeClass( 'current' );
+          $('nav#primary-menu').find( 'li' ).eq( window.current_position ).addClass( 'current' );
+          Backbone.history.navigate( '#section/' + window.current_position, false );
+        }
+      } else if( $(window).scrollTop() > bottom ) {
+        window.current_position++;
+        $('nav#primary-menu').find( 'li' ).removeClass( 'current' );
+        $('nav#primary-menu').find( 'li' ).eq( window.current_position ).addClass( 'current' );
+        Backbone.history.navigate( '#section/' + window.current_position, false );
+      } else {
+      }
+    }
+  }
+  this.bind = function() {
+    $(window).on( 'scroll', _this.listen );
+  }
+  this.init = function() {
+    _this.bind();
+  }
+}
+
 window.Fader = function( img, needs_wrapper ) {
   var _this = this;
   
@@ -63,5 +120,6 @@ window.Fader = function( img, needs_wrapper ) {
 
 
 $(document).ready( function() {
-  
+  var l = new window.Locator();
+  l.init();
 });

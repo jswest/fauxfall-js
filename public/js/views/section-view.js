@@ -20,13 +20,15 @@ define( ['views/art-view', 'models/art', 'models/section'], function( ArtView, A
         pv.render();
         this.paragraph_views.push( pv );
       }
-      $(window).on( 'scroll', this.on_deck );
+      if( this.model.get( 'id' ) == parseInt( window.current_position ) ) {
+        $(window).on( 'scroll', this.on_deck );
+      }
     },
     on_deck: function() {
       var _this = this;
       if( $(window).scrollTop() > $('body').height() - $(window).height() - 100 ) {
         $(window).off( 'scroll', _this.on_deck );
-        var section = new Section( { id: window.current_position + 1 } );
+        var section = new Section( { id: parseInt( window.current_position ) + 1 } );
         section.fetch({
           success: function() {
             var section_view = new SectionView( { model: section } );

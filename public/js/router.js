@@ -8,7 +8,7 @@ define([
   ], function(SectionListView,HeaderView,Section,SectionView,AboutPage,AboutPageView) {
 
     var add_primary_menu = function() {
-      if( $('#primary-menu-wrapper').length < 1 ) {
+      if( $('#primary-nav-wrapper').find('nav').length == 0 ) {
         var primary_nav = new SectionListView();
         primary_nav.render();
         $('h1.smile').remove();
@@ -19,6 +19,7 @@ define([
       routes: {
         '': 'home',
         'pages/about': 'about',
+        'section/:section_id': 'section'
       },
       home: function() {
         window.current_position = 0;
@@ -42,6 +43,30 @@ define([
             var about_page_timer = setTimeout( about_page_view.render, 2000 );
           }
         });
+      },
+      section: function( section_id ) {
+        window.current_position = section_id;
+        if( $('header#content-header').length == 0 ) {
+          var content_header = new HeaderView();
+          content_header.render();
+        }
+        add_primary_menu();
+        var sections = $('.article-section').length
+        var render_section = function( index ) {
+          if( index <= section_id ) {
+            var section = new Section( { id: index } );
+            section.fetch({
+              success: function() {
+                var section_view = new SectionView( { model: section } );
+                section_view.render();
+                render_section( index + 1 );
+              }
+            });
+          } else {
+            $(window).scrollTop( $('.article-section').eq( window.current_position ).offset().top + 1 );
+          }
+        }
+        render_section( sections );
       }
     });
 
