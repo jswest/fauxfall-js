@@ -44,7 +44,6 @@ define(
     on_deck: function() {
       var _this = this;
       if( $(window).scrollTop() > $('body').height() - $(window).height() - 100 ) {
-        console.log( 'called' );
         $(window).off( 'scroll', _this.on_deck );
         var section = new Section( { id: parseInt( window.current_position ) + 1 } );
         section.fetch({
