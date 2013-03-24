@@ -1,4 +1,7 @@
-define(function() {
+
+
+define( function(
+  [ 'library/locator' ], function( Fader ) {
   
   var ArtView = Backbone.View.extend({
     className: 'art-wrapper',
@@ -15,4 +18,5 @@ define(function() {
   });
 
   return ArtView;
+
 });

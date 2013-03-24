@@ -2,10 +2,18 @@ requirejs.config({
 	baseUrl: 'js'
 });
 
-require(['router'], function (AppRouter) {
-	$(document).ready(function() {
-		var router = new AppRouter();
-		Backbone.history.start();
-	});
-});
+require(
+  [
+    'router',
+    'library/locator'
+  ],
+  function( AppRouter ) {
+  	$(document).ready(function() {
+      var l = new Locator();
+      l.init();
+  		var router = new AppRouter();
+  		Backbone.history.start();
+  	});
+  }
+);
 
