@@ -7,7 +7,10 @@ require(
     'router',
     'library/locator'
   ],
-  function( AppRouter ) {
+  function(
+    AppRouter,
+    Locator
+  ) {
   	$(document).ready(function() {
       var l = new Locator();
       l.init();

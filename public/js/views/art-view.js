@@ -1,7 +1,7 @@
 
 
-define( function(
-  [ 'library/locator' ], function( Fader ) {
+define(
+  [ 'library/fader' ], function( Fader ) {
   
   var ArtView = Backbone.View.extend({
     className: 'art-wrapper',
@@ -11,7 +11,7 @@ define( function(
       var template = _.template( $('#art-template').html(), this.model.toJSON() );
       this.model.get( 'parent' ).find('.section-content').append( $(this.el).html( template ) );
       $(this.el).find('img').on( 'load', function() {
-        var fader = new window.Fader( $(_this.el).find('img'), false );
+        var fader = new Fader( $(_this.el).find('img'), false );
         fader.init();  
       });
     }
